@@ -1,0 +1,12 @@
+<div class="back">
+    <div class="main">
+        <textarea
+        class="elem_edit"
+        #editedContent>{{content}}</textarea>
+
+        <div class="btn-wrapper">
+            <button class="btn" (click)="cancelAction()">Cancel</button>
+            <button class="btn btn-save" (click)="doneAction(editedContent.value)">Save</button>
+        </div>
+    </div>
+</div>

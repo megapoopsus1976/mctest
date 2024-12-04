@@ -1,0 +1,18 @@
+<div class="back">
+    <div class="main">
+        <input
+        class="elem_name"
+        placeholder="{{this.placeholder}}"
+        [value]="value"
+        #editedName
+        (keyup.enter)="doneAction(editedName.value)" />
+
+        <div class="btn-wrapper">
+            <button class="btn" (click)="cancelAction()">Cancel</button>
+            <button class="btn btn-save" (click)="doneAction(editedName.value)">
+                {{btnName}}
+            </button>
+        </div>
+    </div>
+  </div>
+

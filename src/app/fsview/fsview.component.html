@@ -1,0 +1,10 @@
+<div class="main">
+<ul>
+<li class="fs_item" *ngIf="path.length > 0"><button (click)="removePath.emit()" class="directory">..</button></li>
+<li class="fs_item" *ngFor="let delem of dlist">
+    <input type="radio" name="cur_file" (change)="selElement.emit(delem)"/>
+    <button (click)="addPath.emit(delem.name)" class="directory" *ngIf="isDir(delem)">{{delem.name}}</button>
+    <div class="file" *ngIf="!isDir(delem)">{{delem.name}}</div>
+</li>
+</ul>
+</div>
